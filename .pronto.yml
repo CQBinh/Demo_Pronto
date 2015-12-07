@@ -1,6 +1,0 @@
-all:
-  # exclude: rspec/*
-github:
-  slug: CQBinh/Demo_Pronto
-  api_endpoint: https://api.github.com/
-  web_endpoint: https://github.com/

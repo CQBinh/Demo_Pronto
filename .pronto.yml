@@ -1,7 +1,6 @@
 all:
-  exclude: rspec/*
+  # exclude: rspec/*
 github:
-  slug: mmozuras/pronto
-  access_token: B26354
+  slug: CQBinh/Demo_Pronto
   api_endpoint: https://api.github.com/
   web_endpoint: https://github.com/

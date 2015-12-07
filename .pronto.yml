@@ -1,4 +1,3 @@
-GITHUB_ACCESS_TOKEN='a44ecdf7724e83ca163c4b796eeeef6f44c69667'
 all:
   exclude: rspec/*
 github:

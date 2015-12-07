@@ -6,8 +6,8 @@ machine:
 
 dependencies:
   post:
-    - chmod +x bin/cisetup
-    - bin/cisetup
+    # - chmod +x bin/cisetup
+    # - bin/cisetup
     # - "export PULL_REQUEST_ID=`bundle exec prid CQBinh/Demo_Pronto` && if [ $PULL_REQUEST_ID ]; then cd .. && git clone git@github.com:CQBinh/Demo_Pronto.git for_pronto && cd for_pronto && git checkout -b ${CIRCLE_BRANCH} remotes/origin/${CIRCLE_BRANCH} && bundle install && PULL_REQUEST_ID=`bundle exec prid CQBinh/Demo_Pronto` bundle exec pronto run -c master -f github_pr && cd ../CQBinh; else echo 'current branch is not pull request'; fi"
     - bundle exec pronto run -f github_pr --exit-code
     - bundle exec rake foo:var

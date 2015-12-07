@@ -2,6 +2,7 @@ dependencies:
   post:
     - chmod +x bin/cisetup
     - bin/cisetup
+    - bundle exec pronto run -f github_pr
 
 checkout:
   post:

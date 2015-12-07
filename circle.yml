@@ -1,9 +1,15 @@
+machine:
+  environment:
+    PULL_REQUEST_URL: ${CI_PULL_REQUEST}
+    PULL_REQUEST_ID: 1
+    # PULL_REQUEST_ID: `echo $CI_PULL_REQUEST | grep -o -E '[0–9]+$' | head -1 | sed -e 's/^0\+//'`
+
 dependencies:
   post:
     - chmod +x bin/cisetup
     - bin/cisetup
     # - "export PULL_REQUEST_ID=`bundle exec prid CQBinh/Demo_Pronto` && if [ $PULL_REQUEST_ID ]; then cd .. && git clone git@github.com:CQBinh/Demo_Pronto.git for_pronto && cd for_pronto && git checkout -b ${CIRCLE_BRANCH} remotes/origin/${CIRCLE_BRANCH} && bundle install && PULL_REQUEST_ID=`bundle exec prid CQBinh/Demo_Pronto` bundle exec pronto run -c master -f github_pr && cd ../CQBinh; else echo 'current branch is not pull request'; fi"
-    - PULL_REQUEST_ID=`echo $CI_PULL_REQUEST | grep -o -E '[0–9]+$' | head -1 | sed -e 's/^0\+//'`  pronto run -f github_pr --exit-code
+    - pronto run -f github_pr --exit-code
     - bundle exec rake foo:var
 
 checkout:

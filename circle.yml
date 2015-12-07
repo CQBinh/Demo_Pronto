@@ -2,7 +2,8 @@ dependencies:
   post:
     - chmod +x bin/cisetup
     - bin/cisetup
-    - bundle exec pronto run -f github_pr
+    - bundle exec pronto run -f github_pr --exit-code
+    - bundle exec rake foo:var
 
 checkout:
   post:

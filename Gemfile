@@ -11,6 +11,8 @@ gem 'pronto'
 gem 'pronto-rubocop', require: false
 gem 'pronto-flay', require: false
 
+gem 'config'
+
 group :development, :test do
   gem "byebug"
 end

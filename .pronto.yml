@@ -1,0 +1,8 @@
+GITHUB_ACCESS_TOKEN='a44ecdf7724e83ca163c4b796eeeef6f44c69667'
+all:
+  exclude: rspec/*
+github:
+  slug: mmozuras/pronto
+  access_token: B26354
+  api_endpoint: https://api.github.com/
+  web_endpoint: https://github.com/
